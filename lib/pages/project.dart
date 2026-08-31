@@ -42,7 +42,7 @@ class _ProjectPageState extends State<ProjectPage> {
               ),
               SizedBox(height: 30),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 90.0),
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
                 child: Text(
                   'Here are some of the projects I have worked on:',
                   style: TextStyle(fontSize: 24),
