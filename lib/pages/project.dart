@@ -14,6 +14,7 @@ class _ProjectPageState extends State<ProjectPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Projects'),
+        backgroundColor: Colors.deepPurple,
       ),
       body: SingleChildScrollView(
         child: Center(

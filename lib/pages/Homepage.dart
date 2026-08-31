@@ -70,52 +70,69 @@ class MyHomePage extends StatelessWidget {
                   children: [
                     Text(
                       'Paras Jain', textAlign: TextAlign.center,
-                      style: TextStyle(fontWeight: FontWeight.bold),
+                      style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(height: 10),
+                    SizedBox(height: 20),
                     Text(
                       'Flutter Developer | Aspiring Software Engineer',
                       textAlign: TextAlign.center,
                       style: TextStyle(color: Colors.grey),
                     ),
                     SizedBox(height: 30),
-                    Wrap(
-                      spacing: 5.0,
-                      runSpacing: 10.0,
-                      alignment: WrapAlignment.center,
-                      crossAxisAlignment: WrapCrossAlignment.center,
+                    BottomAppBar(
+                      child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        IconButton(
-                          icon: Icon(Icons.linked_camera),
-                          onPressed: () {
-                            final url = Uri.parse(
-                              'https://www.linkedin.com/in/paras-j-97030a280/',
-                            );
-
-                            launchUrl(url);
-                          },
+                        Padding(
+                          padding: const EdgeInsets.only(right: 11.0),
+                          child: Column(
+                            children: [
+                              IconButton(
+                                icon: Icon(Icons.linked_camera),
+                                onPressed: () {
+                                  final url = Uri.parse(
+                                    'https://www.linkedin.com/in/paras-j-97030a280/',
+                                  );
+                              
+                                  launchUrl(url);
+                                },
+                              ),
+                              Text('LinkedIn', style: TextStyle(fontSize: 8)),
+                            ],
+                          ),
                         ),
-                        Text('<- Visit LinkedIn'),
-                        IconButton(
-                          icon: Icon(Icons.code),
-                          onPressed: () {
-                            final url = Uri.parse('https://github.com/parshw1');
-
-                            launchUrl(url);
-                          },
+                        Padding(
+                          padding: const EdgeInsets.only(right: 11.0),
+                          child: Column(
+                            children: [
+                              IconButton(
+                                icon: Icon(Icons.code),
+                                onPressed: () {
+                                  final url = Uri.parse('https://github.com/parshw1');
+                              
+                                  launchUrl(url);
+                                },
+                              ),
+                              Text('GitHub', style: TextStyle(fontSize: 8)),
+                            ],
+                          ),
                         ),
-                        Text('<- Visit GitHub'),
-                        IconButton(
-                          icon: Icon(Icons.email),
-                          onPressed: () {
-                            final url = Uri.parse(
-                              'mailto:parasj7765r@gmail.com',
-                            );
-                            launchUrl(url);
-                          },
+                        Column(
+                          children: [
+                            IconButton(
+                              icon: Icon(Icons.email),
+                              onPressed: () {
+                                final url = Uri.parse(
+                                  'mailto:parasj7765r@gmail.com',
+                                );
+                                launchUrl(url);
+                              },
+                            ),
+                            Text('Email', style: TextStyle(fontSize: 8)),
+                          ],
                         ),
-                        Text('<- Send Email'),
                       ]
+                      )
                     ),
                   ],
                 ),

@@ -8,6 +8,7 @@ class AboutPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('About Me'),
+        backgroundColor: Colors.deepPurple,
       ),
       body: SingleChildScrollView(
         child: Center(
