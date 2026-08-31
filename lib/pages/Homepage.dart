@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:portfolio/pages/about_me.dart';
+import 'package:portfolio/pages/project.dart';
+
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
 
@@ -9,7 +11,7 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text('Portfolio', 
+        title: const Text('Portfolio App', 
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, fontFamily: 'Times New Roman'),
         ),
         backgroundColor: Colors.deepPurple,
@@ -33,6 +35,17 @@ class MyHomePage extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const AboutPage()),
+                );
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.person),
+              title: const Text('Projects'),
+              onTap: () {
+                
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ProjectPage()),
                 );
               },
             ),
@@ -64,6 +77,7 @@ class MyHomePage extends StatelessWidget {
                           style: TextStyle(fontSize: 16, color: Colors.grey),
                         ),
                       ),
+                      SizedBox(height: 30),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -89,7 +103,20 @@ class MyHomePage extends StatelessWidget {
                           ),
                           Text('<- Visit GitHub'),
                         ],
-                      )
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          IconButton(
+                            icon: Icon(Icons.email),
+                            onPressed: () {
+                              final url = Uri.parse('mailto:parasj7765r@gmail.com');
+                              launchUrl(url);
+                            },
+                          ),
+                          Text('<- Send Email'),
+                        ],
+                      ),
                     ],
                   ),
                 ),
