@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:portfolio/pages/about_me.dart';
+<<<<<<< HEAD
 import 'package:portfolio/pages/project.dart';
 
+=======
+>>>>>>> origin/first-commit
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
 
@@ -11,7 +14,11 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+<<<<<<< HEAD
         title: const Text('Portfolio App', 
+=======
+        title: const Text('Portfolio', 
+>>>>>>> origin/first-commit
           style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, fontFamily: 'Times New Roman'),
         ),
         backgroundColor: Colors.deepPurple,
@@ -38,6 +45,7 @@ class MyHomePage extends StatelessWidget {
                 );
               },
             ),
+<<<<<<< HEAD
             ListTile(
               leading: const Icon(Icons.person),
               title: const Text('Projects'),
@@ -49,20 +57,27 @@ class MyHomePage extends StatelessWidget {
                 );
               },
             ),
+=======
+>>>>>>> origin/first-commit
           ],
         ),
       ),
       body: SingleChildScrollView(
         child: Center(
           child: Padding(
+<<<<<<< HEAD
             padding: const EdgeInsets.symmetric(
               horizontal: 20.0,
               vertical: 50.0,
             ),
+=======
+            padding: const EdgeInsets.all(100.0),
+>>>>>>> origin/first-commit
             child: Column(
               children: [
                 CircleAvatar(
                   radius: 100,
+<<<<<<< HEAD
                   backgroundImage: AssetImage('assets/images/profile.jpg'),
                 ),
                 SizedBox(height: 40),
@@ -135,6 +150,50 @@ class MyHomePage extends StatelessWidget {
                       )
                     ),
                   ],
+=======
+                  backgroundImage: AssetImage('lib/assets/images/profile.jpeg'),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(50.0),
+                  child: Column(
+                    children: [
+                      Text(
+                        'Paras Jain',
+                        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(10.0),
+                        child: Text(
+                          'Flutter Developer | Aspiring Software Engineer',
+                          style: TextStyle(fontSize: 16, color: Colors.grey),
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          IconButton(
+                            icon: Icon(Icons.linked_camera),
+                            onPressed: () {
+                              final url = Uri.parse('https://www.linkedin.com/in/paras-j-97030a280/');
+                      
+                              launchUrl(url);
+                            },
+                          ),
+                          Text('Visit LinkedIn'),
+                          IconButton(
+                            icon: Icon(Icons.code),
+                            onPressed: () {
+                              final url = Uri.parse('https://github.com/parshw1');
+                      
+                              launchUrl(url);
+                            },
+                          ),
+                          Text('Visit GitHub'),
+                        ],
+                      )
+                    ],
+                  ),
+>>>>>>> origin/first-commit
                 ),
               ],
             ),

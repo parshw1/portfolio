@@ -2,6 +2,11 @@
 
 A new Flutter project.
 
+<<<<<<< HEAD
+=======
+A Basic Flutter Portfolio Project
+
+>>>>>>> origin/first-commit
 ## Getting Started
 
 This project is a starting point for a Flutter application.

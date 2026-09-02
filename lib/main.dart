@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:portfolio/pages/homepage.dart';
+=======
+import 'package:portfolio/pages/Homepage.dart';
+>>>>>>> origin/first-commit
 
 void main() {
   runApp(const MyApp());
