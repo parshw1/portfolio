@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
-import 'package:portfolio/assets/widgets/project_card.dart';
-import 'package:portfolio/assets/widgets/skillchips.dart';
+import 'package:portfolio/widgets/project_card.dart';
+import 'package:portfolio/widgets/skillchips.dart';
 
 class ProjectPage extends StatefulWidget {
   const ProjectPage({super.key});
